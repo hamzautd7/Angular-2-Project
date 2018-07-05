@@ -1,0 +1,53 @@
+<div *ngIf="movie">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{movie.title}}</h3> 
+            
+        </div>
+        <!--<iframe width="854" height="480" src="http://scw-256956.gphoto.stream/videos/5a4340c09d61cb10b3dffdb3.mp4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe> -->
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-5">
+                    <img class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                </div>    
+                <div class="col-md-7">
+                    <ul class="list-group">
+                        <li class="list-group-item">Genres: <span *ngFor="let genre of movie.genres">{{genre.name}}</span></li>    
+                        <li class="list-group-item">Release Date: {{movie.release_date}}</li>
+                        <li class="list-group-item">Click Below to Watch</li>
+                        
+                    <video  width="635" controls>
+                        
+
+                        <!--movie-->
+                        <source src="https://f10.megaup.net/Z7h/It.2017.720p.BluRay.x264-%5BYTS.AG%5D.mp4?download_token=f1380dd82728736d2d7ec646dacf1b835b232ad8811c2fb3e6ea20f9e0cd8249" type="video/mp4">
+                        <!--short video-->
+                        <!--<source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">-->
+                     
+                        </video>
+
+
+                        <a href="http://localhost:8081/demo/screenshare-and-camera"><button class="btn btn-primary btn-lg">Start Screen Share</button></a>
+                    </ul>
+                    <br>
+                    <a *ngIf="movie.homepage" href="{{movie.homepage}}" target="_blank" class="btn btn-default">Visit Movie Website</a>
+                </div>  
+            </div>
+        </div> 
+    </div>    
+</div>
+
+<!-- http://g6s2.fshare.to/movies03/Movie/2016/01/03/Whiplash.2014.720p.BluRay.H264.AAC-RARBG.mp4?h=UIzWw3PtN74LFgS7hqHbpQ&e=1492509074 -->
+<script>
+    console.log("test");
+</script>
+
+<div style="margin-top:300px; ">
+
+</div>
+<video  width="635" controls>
+                        
+                        <!--short video-->
+                        <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" type="video/mp4">
+                     
+                        </video>
